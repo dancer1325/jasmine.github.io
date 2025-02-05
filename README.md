@@ -1,5 +1,8 @@
 [Jasmine doc site](https://jasmine.github.io/)
 
+# Documentation
+* follow [docs](pages/docs_home.html)
+
 # Advanced: providing a live demo
 
 If you're making complicated or potentially controversial changes to the documentation, it
