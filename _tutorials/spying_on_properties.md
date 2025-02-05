@@ -3,13 +3,19 @@ layout: article
 title: Spying on Properties
 ---
 
-# Spying on Properties
+# Spying Properties
 
-Properties are more complicated than functions. In Jasmine, you can do anything with a property spy that you
-can do with a function spy, but you may need to use different syntax.
+* Properties complication > functions complication 
+* | Jasmine,
+  * property spy syntax != function spy syntax
+  * what you can do -- via -- property spy  -> can be done -- via -- function spy
 
-Use `spyOnProperty` to create either a getter or setter spy.
+* `spyOnProperty()`
+  * create 
+    * getter spy or
+    * setter spy
 
+* TODO: How / Where to create it?
 ```javascript
 it("allows you to create spies for either type", function() {
   spyOnProperty(someObject, "myValue", "get").and.returnValue(30);
@@ -17,7 +23,8 @@ it("allows you to create spies for either type", function() {
 });
 ```
 
-Changing the value of an existing spy is more difficult than with a function, because you cannot _refer_ to a property without calling its `getter` method. To get around this, you can save a reference to the spy for later changes.
+Changing the value of an existing spy is more difficult than with a function, because you cannot _refer_ to a property without calling its `getter` method. 
+To get around this, you can save a reference to the spy for later changes.
 
 ```javascript
 beforeEach(function() {
