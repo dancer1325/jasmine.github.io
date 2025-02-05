@@ -2,30 +2,25 @@
 question: How can I use Jasmine on my TypeScript project?
 ---
 
-There are two common ways to use Jasmine and TypeScript together. 
-
-The first is to compile TypeScript files to JavaScript on the fly as they're
-imported:
-
-* If you're using Vite-specific syntax such as extensionless ES module imports,
-  use [tsx](https://www.npmjs.com/package/tsx).
-* If you're using standard TypeScript, you can use `@babel/register`. See
-  [Testing a React app with Jasmine NPM]({{ site.baseurl }}/tutorials/react_with_npm) for an
-  example. 
-
-The second approach is to compile your TypeScript spec files to JavaScript files
-on disk and configure Jasmine to run the compiled TypeScript files:
-
-* If you're using Vite-specific syntax such as extensionless ES module imports,
-  use esbuild.
-* If you're using standard TypeScript, use tsc.
-
-
-The compile-on-the-fly approach is usually easy to set up and provides the
-fastest possible edit-compile-run-specs cycle. However, it doesn't do any type
-checking by default. You can add type checking by creating a separate TypeScript 
-config file for your specs with `noEmit` set to `true`, and running `tsc` on it
-either before or after running your specs. Compiling to files on disk gives a
-slower edit-compile-run-specs cycle, but it's a more familiar workflow for
-people who are used to compiled languages. It's also the only option if you want
-to write specs in TypeScript and run them in a browser.
+* ways to use Jasmine + TypeScript
+  * | importing TS files,
+    * compile TypeScript files -- to -- JavaScript files
+      * if you're using Vite-specific syntax (_Example:_ extensionless ES module imports) -> use [tsx](https://www.npmjs.com/package/tsx)
+      * if you're using standard TypeScript -> use `@babel/register`
+        * _Example:_ [React with Node](/_tutorials/react_with_node.md)
+      * pros
+        * easy to set up
+        * the fastest possible edit-compile-run-specs cycle
+      * cons
+        * by default, NO type checking
+          * if you want to add type checking -> 
+            * create a separate ".tsconfig" -- for -- YOUR specs / `noEmit=true`
+            * run `tsc` BEFORE or AFTER running your specs
+  * | disk, compile TypeScript files -- to -- JavaScript files + configure Jasmine / run the compiled TypeScript files
+    * if you're using Vite-specific syntax (_Example:_ extensionless ES module imports) -> use esbuild
+    * if you're using standard TypeScript -> use tsc
+    * pros
+      * 's workflow == compiled languages' workflow
+      * ⚠️if you want to write TypeScript specs & run | browser -> ONLY option ⚠️
+    * cons
+      * slower edit-compile-run-specs cycle
