@@ -6,4 +6,4 @@
 * `npm run test`
   * Problems:
     * Problem1: "No specs found"
-      * Solution: TODO:
+      * Solution: Place | "spec/"
