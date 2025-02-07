@@ -7,292 +7,77 @@ redirect_from:
 include_docco: true
 file_name: "your_first_suite"
 ---
-<table class="docco" cellspacing="0" cellpadding="0">
-  <tbody>
-  <tr id="section-Suites:_describe_Your_Tests">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Suites:_describe_Your_Tests">&#182;</a>
-      </div>
-      <div>
-        <h2>Suites: <code>describe</code> Your Tests</h2>
-<p>The <a href="/api/edge/global.html#describe">describe</a> function is for grouping
-related specs, typically each test file has one at the top level.
-The string parameter is for naming the collection of specs, and will be
-concatenated with specs to make a spec&#x27;s full name. This aids in finding
-specs in a large suite. If you name them well, your specs read as full
-sentences in traditional <a href="http://en.wikipedia.org/wiki/Behavior-driven_development">BDD</a>
-style.</p>
-<h2>Specs</h2>
-<p>Specs are defined by calling the global Jasmine function
-<a href="/api/edge/global.html#it">it</a>, which, like <code>describe</code> takes a string and a
-function. The string is the title of the spec and the function is the spec, or
-test. A spec contains one or more expectations that test the state of the code.
-An expectation in Jasmine is an assertion that is either true or false. A spec
-with all true expectations is a passing spec. A spec with one or more false
-expectations is a failing spec.</p>
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}describe("A suite", function() {
-    it("contains a spec with an expectation", function() {
-        expect(true).toBe(true);
-    });
-});
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-Itx27s_Just_Functions">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Itx27s_Just_Functions">&#182;</a>
-      </div>
-      <div>
-        <h3>It&#x27;s Just Functions</h3>
-<p>Since <code>describe</code> and <code>it</code> blocks are functions, they can contain any
-executable code necessary to implement the test. JavaScript scoping rules
-apply, so variables declared in a <code>describe</code> are available to any <code>it</code> block
-inside the suite.</p>
+# Suites -- `function describe(description String, specDefinitions) {}` -- 
+* describe your tests /
+  * NORMALLY, 1 suite / file
+* `function describe(description: String, specDefinitions) {}`
+  * allows
+    * grouping related specs
+  * `description`
+    * allows
+      * naming the collection of specs
+    * uses
+      * \+ `specs` == [traditional BDD full name](http://en.wikipedia.org/wiki/Behavior-driven_development) 
+      * find specs | large suite
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}describe("A suite is just a function", function() {
-    let a;
+# Specs -- `it(description: String, testFunction, timeout){}` --
+* == global Jasmine function
+* `description`,
+  * == spec's title
+* `testFunction`
+  * 👀== spec, or test 👀
+  * == >=1 expectations
+    * if ALL expectations pass -> passing spec
+    * if >=1 expectations are false -> failing spec 
+    * expectation
+      * == assertion / it's true or false 
 
-    it("and so is a spec", function() {
-        a = true;
+## Just Functions
+* `describe` & `it` blocks 
+  * -- contain -- any executable code necessary / implement the test
+    * Reason: 🧠they are functions 🧠 
+  * 👀JavaScript scoping rules apply 👀
+    * == variables / declared | `describe` -> AVAILABLE | any `it` block
 
-        expect(a).toBe(true);
-    });
-});
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-Expectations">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Expectations">&#182;</a>
-      </div>
-      <div>
-        <h2>Expectations</h2>
-<p>Expectations are built with the function <code>expect</code> which takes a value, called
-the actual. It is chained with a Matcher function, which takes the expected
-value.</p>
+# Expectations -- `expect(actual).matcherFunction()`
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}describe("The 'toBe' matcher compares with ===", function() { {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-Matchers">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Matchers">&#182;</a>
-      </div>
-      <div>
-        <h3>Matchers</h3>
-<p>Each matcher implements a boolean comparison between the actual value and
-the expected value. It is responsible for reporting to Jasmine if the
-expectation is true or false. Jasmine will then pass or fail the spec.</p>
+## Matchers
+* implements a boolean comparison : actual value vs expected value /
+  * report the -- result comparison to -- Jasmine / pass or fail the spec
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}    it("and has a positive case", function() {
-        expect(true).toBe(true);
-    });
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-Any_matcher_can_evaluate_to_a_negative_assertion_by_chaining_the_call_to">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Any_matcher_can_evaluate_to_a_negative_assertion_by_chaining_the_call_to">&#182;</a>
-      </div>
-      <div>
-        <p>Any matcher can evaluate to a negative assertion by chaining the call to
-<code>expect</code> with a <code>not</code> before calling the matcher.</p>
+* `.not.`
+  * allows
+    * evaluating to a negative assertion
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}    it("and can have a negative case", function() {
-        expect(false).not.toBe(true);
-    });
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-Jasmine_has_a_rich_set_of_matchers_included,_you_can_find_the_full_list_in">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Jasmine_has_a_rich_set_of_matchers_included,_you_can_find_the_full_list_in">&#182;</a>
-      </div>
-      <div>
-        <p>Jasmine has a rich set of matchers included, you can find the full list in
-the <a href="/api/edge/matchers.html">API docs</a> There is also the ability to write
-<a href="custom_matcher.html">custom matchers</a> for when a project&#x27;s domain
-calls for specific assertions that are not included in Jasmine.</p>
+* see 
+  * [built-in matchers](/_api/edge/matchers.md)
+  * [custom matchers](custom_matchers.md)
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}});
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-Setup_and_Teardown">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Setup_and_Teardown">&#182;</a>
-      </div>
-      <div>
-        <h3>Setup and Teardown</h3>
-<p>To help a test suite DRY up any duplicated setup and teardown code, Jasmine
-provides the global <a href="/api/edge/global.html#beforeEach">beforeEach</a>,
-<a href="/api/edge/global.html#afterEach">afterEach</a>,
-<a href="/api/edge/global.html#beforeAll">beforeAll</a>, and
-<a href="/api/edge/global.html#afterAll">afterAll</a> functions.</p>
+## Setup and Teardown
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}describe("A suite with some shared setup", function() {
-    let foo = 0;
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-As_the_name_implies,_the_beforeEach_function_is_called_once_before_each_spec_in_the_describe_in_which_it_is_called">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-As_the_name_implies,_the_beforeEach_function_is_called_once_before_each_spec_in_the_describe_in_which_it_is_called">&#182;</a>
-      </div>
-      <div>
-        <p>As the name implies, the <code>beforeEach</code> function is called once before each spec in the <code>describe</code> in which it is called</p>
+* goal
+  * test suite DRY up any duplicated setup & teardown code
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}    beforeEach(function() {
-        foo += 1;
-    });
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-and_the_afterEach_function_is_called_once_after_each_spec">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-and_the_afterEach_function_is_called_once_after_each_spec">&#182;</a>
-      </div>
-      <div>
-        <p>and the <code>afterEach</code> function is called once after each spec.</p>
+* -- via --
+  * `beforeEach`
+    * == run BEFORE EACH `describe`'s `it`
+  * `afterEach`
+    * == run AFTER EACH `describe`'s `it`
+  * `beforeAll`
+    * == run BEFORE ALL `describe`'s `it`
+  * `afterAll`
+    * == run AFTER ALL `describe`'s `it`
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}    afterEach(function() {
-        foo = 0;
-    });
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-The_beforeAll_function_is_called_only_once_before_all_the_specs_in_describe_are_run,">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-The_beforeAll_function_is_called_only_once_before_all_the_specs_in_describe_are_run,">&#182;</a>
-      </div>
-      <div>
-        <p>The <code>beforeAll</code> function is called only once before all the specs in describe are run,</p>
+## `this` 
+* allows
+  * sharing variables between `beforeEach` -- `it` -- `afterEach`
+    * Reason: 🧠EACH `beforeEach` / `it` / `afterEach` 's `this` == empty object 🧠
+    * requirements
+      * 👀use the `function` keyword, rather than arrow functions 👀
 
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}    beforeAll(function() {
-        foo = 1;
-    });
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-and_the_afterAll_function_is_called_after_all_specs_finish">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-and_the_afterAll_function_is_called_after_all_specs_finish">&#182;</a>
-      </div>
-      <div>
-        <p>and the <code>afterAll</code> function is called after all specs finish.</p>
-
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}    afterAll(function() {
-        foo = 0;
-    });
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-beforeAll_and_afterAll_can_be_used_to_speed_up_test_suites_with">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-beforeAll_and_afterAll_can_be_used_to_speed_up_test_suites_with">&#182;</a>
-      </div>
-      <div>
-        <p><code>beforeAll</code> and <code>afterAll</code> can be used to speed up test suites with
-expensive setup and teardown.</p>
-<p>However, be careful using <code>beforeAll</code> and <code>afterAll</code>! Since they are not
-reset between specs, it is easy to accidentally leak state between your
-specs so that they erroneously pass or fail.</p>
-
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %} {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-The_this_keyword">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-The_this_keyword">&#182;</a>
-      </div>
-      <div>
-        <h3>The <code>this</code> keyword</h3>
-<p>Another way to share variables between a <code>beforeEach</code>, <code>it</code>, and
-<code>afterEach</code> is through the <code>this</code> keyword. Each spec&#39;s
-<code>beforeEach</code>/<code>it</code>/<code>afterEach</code> has the <code>this</code> as the same empty object that
-is set back to empty for the next spec&#39;s <code>beforeEach</code>/<code>it</code>/<code>afterEach</code>.</p>
-<p>Note: If you want to use the <code>this</code> keyword to share variables, you must
-use the <code>function</code> keyword and not arrow functions.</p>
-
-      </div>
-    </td>
-    <td class="code">
-      {% highlight javascript %}    describe("A spec", function() {
-        beforeEach(function() {
-            this.foo = 0;
-        });
-
-        it("can use the `this` to share state", function() {
-            expect(this.foo).toEqual(0);
-            this.bar = "test pollution?";
-        });
-
-        it("prevents test pollution by having an empty `this` " +
-            "created for the next spec", function() {
-            expect(this.foo).toEqual(0);
-            expect(this.bar).toBe(undefined);
-        });
-    });
- {% endhighlight %}
-    </td>
-  </tr>
-  <tr id="section-Manually_failing_a_spec_with_fail">
-    <td class="docs">
-      <div class="pilwrap">
-        <a class="pilcrow" href="#section-Manually_failing_a_spec_with_fail">&#182;</a>
-      </div>
-      <div>
-        <h3>Manually failing a spec with fail</h3>
+## Manually failing a spec with fail
+* TODO:
 <p>The fail function causes a spec to fail. It can take a failure message or
 an Error object as a parameter.</p>
 
@@ -320,8 +105,8 @@ an Error object as a parameter.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Nesting_describe_Blocks">&#182;</a>
       </div>
-      <div>
-        <h3>Nesting <code>describe</code> Blocks</h3>
+
+## Nesting <code>describe</code> Blocks
 <p>Calls to <code>describe</code> can be nested, with specs defined at any level. This
 allows a suite to be composed as a tree of functions. Before a spec is
 executed, Jasmine walks down the tree executing each <code>beforeEach</code> function
@@ -371,9 +156,8 @@ in order. After the spec is executed, Jasmine walks through the
     <td class="docs">
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Disabling_Suites">&#182;</a>
-      </div>
-      <div>
-        <h3>Disabling Suites</h3>
+
+## Disabling Suites
 <p>Suites can be disabled with the <code>xdescribe</code> function. These suites and any
 specs inside them are skipped when run and thus their results will show as
 pending.</p>
@@ -403,8 +187,8 @@ pending.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Pending_Specs">&#182;</a>
       </div>
-      <div>
-        <h3>Pending Specs</h3>
+
+## Pending Specs
 <p>Pending specs do not run, but their names will show up in the results as
 pending.</p>
 
@@ -492,7 +276,8 @@ will run.</p>
         <a class="pilcrow" href="#section-Asynchronous_Support">&#182;</a>
       </div>
       <div>
-        <h2>Asynchronous Support</h2>
+
+# Asynchronous Support
 <p>Jasmine also has support for running specs that require testing
 asynchronous operations. The functions that you pass to <code>beforeAll</code>,
 <code>afterAll</code>, <code>beforeEach</code>, <code>afterEach</code>, and <code>it</code> can be declared async.</p>
@@ -585,7 +370,8 @@ given describe.</p>
         <a class="pilcrow" href="#section-Spies">&#182;</a>
       </div>
       <div>
-        <h2>Spies</h2>
+
+# Spies
 <p>Jasmine has test double functions called <a href="/api/edge/Spy.html">spies</a>. A spy
 can stub any function and tracks calls to it and all arguments. A spy only
 exists in the <code>describe</code> or <code>it</code> block in which it is defined, and will be
@@ -707,8 +493,8 @@ matches any of the recorded calls to the spy.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Spies:_createSpy">&#182;</a>
       </div>
-      <div>
-        <h3>Spies: <code>createSpy</code></h3>
+      
+## Spies: <code>createSpy</code>
 <p>When there is not a function to spy on, <code>jasmine.createSpy</code> can create a
 &quot;bare&quot; spy. This spy acts as any other spy - tracking calls, arguments, etc.
 But there is no implementation behind it.</p>
@@ -737,8 +523,8 @@ But there is no implementation behind it.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Spies:_createSpyObj">&#182;</a>
       </div>
-      <div>
-        <h3>Spies: <code>createSpyObj</code></h3>
+
+## Spies: <code>createSpyObj</code>
 <p>In order to create a mock with multiple spies, use
 <a href="/api/edge/jasmine.html#.createSpyObj">jasmine.createSpyObj</a> and pass an array
 of strings. It returns an object that has a property for each string that is a
@@ -777,7 +563,8 @@ spy.</p>
         <a class="pilcrow" href="#section-Matching_with_more_finesse">&#182;</a>
       </div>
       <div>
-        <h2>Matching with more finesse</h2>
+
+# Matching with more finesse
 <p>Sometimes you don&#39;t want to match with exact equality. Jasmine provides a
 number of asymmetric equality testers.</p>
 
@@ -951,8 +738,8 @@ array.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-jasminestringMatchingapiedgeglobalhtmlstringMatching_is_for">&#182;</a>
       </div>
-      <div>
-        <h3><a href="/api/edge/global.html#.stringMatching">jasmine.stringMatching</a> is for</h3>
+
+## <a href="/api/edge/global.html#.stringMatching">jasmine.stringMatching</a> is for
 <p>when you don&#39;t want to match a string in a larger object exactly, or match
 a portion of a string in a spy expectation.</p>
 
@@ -992,8 +779,8 @@ a portion of a string in a spy expectation.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Custom_asymmetric_equality_tester">&#182;</a>
       </div>
-      <div>
-        <h3>Custom asymmetric equality tester</h3>
+      
+## Custom asymmetric equality tester
 <p>When you need to check that something meets a certain criteria, without
 being strictly equal, you can also specify a custom asymmetric equality
 tester simply by providing an object that has an <code>asymmetricMatch</code> function.</p>
@@ -1032,7 +819,8 @@ tester simply by providing an object that has an <code>asymmetricMatch</code> fu
         <a class="pilcrow" href="#section-Jasmine_Clock">&#182;</a>
       </div>
       <div>
-        <h2>Jasmine Clock</h2>
+
+# Jasmine Clock
 <p>The <a href="/api/edge/Clock.html">Jasmine Clock</a> is available for testing
 time-dependent code.</p>
 
@@ -1086,8 +874,8 @@ original functions.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Mocking_the_JavaScript_Timeout_Functions">&#182;</a>
       </div>
-      <div>
-        <h3>Mocking the JavaScript Timeout Functions</h3>
+
+## Mocking the JavaScript Timeout Functions
 <p>You can make <code>setTimeout</code> or <code>setInterval</code> synchronous executing the
 registered functions only once the clock is ticked forward in time.</p>
 <p>To execute registered functions, move time forward via the
@@ -1132,8 +920,8 @@ registered functions only once the clock is ticked forward in time.</p>
       <div class="pilwrap">
         <a class="pilcrow" href="#section-Mocking_the_Date">&#182;</a>
       </div>
-      <div>
-        <h3>Mocking the Date</h3>
+
+## Mocking the Date
 <p>The Jasmine Clock can also be used to mock the current date.</p>
 
       </div>
