@@ -4,609 +4,42 @@ title: "Namespace: matchers"
 prettify: true
 ---
 
-<div class="main-content api-docs">
-  <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-jasmine-core.html">jasmine-core</a></li></ul><h3>Namespaces</h3><ul><li><a href="asymmetricEqualityTesters.html">asymmetricEqualityTesters</a></li><li><a href="async-matchers.html">async-matchers</a></li><li><a href="jasmine.html">jasmine</a></li><li><a href="matchers.html">matchers</a></li><li><a href="Spy_calls.html">Spy#calls</a></li></ul><h3>Classes</h3><ul><li><a href="Clock.html">Clock</a></li><li><a href="Env.html">Env</a></li><li><a href="jsApiReporter.html">jsApiReporter</a></li><li><a href="MatchersUtil.html">MatchersUtil</a></li><li><a href="ParallelReportDispatcher.html">ParallelReportDispatcher</a></li><li><a href="Spy.html">Spy</a></li><li><a href="Timer.html">Timer</a></li></ul><h3>Interfaces</h3><ul><li><a href="AsymmetricEqualityTester.html">AsymmetricEqualityTester</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Reporter.html">Reporter</a></li><li><a href="ReporterCapabilities.html">ReporterCapabilities</a></li><li><a href="Spec.html">Spec</a></li><li><a href="SpyStrategy.html">SpyStrategy</a></li><li><a href="Suite.html">Suite</a></li><li><a href="ThrowUnlessFailure.html">ThrowUnlessFailure</a></li></ul><h3>Global</h3><ul><li><a href="global.html#afterAll">afterAll</a></li><li><a href="global.html#afterEach">afterEach</a></li><li><a href="global.html#beforeAll">beforeAll</a></li><li><a href="global.html#beforeEach">beforeEach</a></li><li><a href="global.html#describe">describe</a></li><li><a href="global.html#expect">expect</a></li><li><a href="global.html#expectAsync">expectAsync</a></li><li><a href="global.html#fail">fail</a></li><li><a href="global.html#fdescribe">fdescribe</a></li><li><a href="global.html#fit">fit</a></li><li><a href="global.html#it">it</a></li><li><a href="global.html#pending">pending</a></li><li><a href="global.html#setSpecProperty">setSpecProperty</a></li><li><a href="global.html#setSuiteProperty">setSuiteProperty</a></li><li><a href="global.html#spyOn">spyOn</a></li><li><a href="global.html#spyOnAllFunctions">spyOnAllFunctions</a></li><li><a href="global.html#spyOnProperty">spyOnProperty</a></li><li><a href="global.html#throwUnless">throwUnless</a></li><li><a href="global.html#throwUnlessAsync">throwUnlessAsync</a></li><li><a href="global.html#xdescribe">xdescribe</a></li><li><a href="global.html#xit">xit</a></li></ul>
-  </nav>
+* goal
+  * built-in Jasmine's matchers
 
-  <div class="docs">
-    <h1 class="page-title">Namespace: matchers</h1>
-
-
-
-
-
-
-<section>
-
-<header>
-
-        <h2>matchers</h2>
-
-
-</header>
-
-<article>
-    <div class="container-overview">
-
-
-            <div class="description"><p>Matchers that come with Jasmine out of the box.</p></div>
-
-
-
-
-
-<dl class="details">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</dl>
-
-
-
-
-    </div>
-
+* _Examples:_ [here](/examples/api-matchers)
     
+# Members
 
+## `.not.`
+
+* == `not.someMatcher()`
+  * invert `someMatcher`
     
+# Methods
 
-    
+## `.nothing()`
 
-    
+* == expect NOTHING explicitly
 
-    
+## `.toBe(expected)`
 
-    
+* `===`
+* `expected`
+  * == object
 
-    
-        <h3 class="subsection-title">Members</h3>
+## `.toBeCloseTo(expected, precision)`
 
+* == 
+* `expected`
+  * == object
+* precision
+  * OPTIONAL
+  * == number of decimal points / check
 
+## `.toBeDefined()`
 
-<h4 class="name" id="not"><span class="type-signature"></span>not<span class="type-signature"> :<a href="matchers.html">matchers</a></span></h4>
-
-
-
-
-<div class="description">
-    <p>Invert the matcher following this <a href="global.html#expect"><code>expectation</code></a></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-
-<span class="param-type"><a href="matchers.html">matchers</a></span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-
-
-
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>1.3.0</li></ul></dd>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</dl>
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>expect(something).not.toBe(true);</code></pre>
-
-
-
-        
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="nothing"><span class="type-signature"></span>nothing<span class="signature">()</span><span class="type-signature"></span></h4>
-
-
-
-
-
-
-<div class="description">
-    <p><a href="global.html#expect"><code>expect</code></a> nothing explicitly.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-
-
-
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>2.8.0</li></ul></dd>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>expect().nothing();</code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="toBe"><span class="type-signature"></span>toBe<span class="signature">(expected)</span><span class="type-signature"></span></h4>
-
-
-
-
-
-
-<div class="description">
-    <p><a href="global.html#expect"><code>expect</code></a> the actual value to be <code>===</code> to the expected value.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-
-
-<table class="params">
-    <thead>
-    <tr>
-
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>expected</code></td>
-            
-
-            <td class="type">
-
-
-<span class="param-type">Object</span>
-
-
-
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The expected value to compare against.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-
-
-
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>1.3.0</li></ul></dd>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>expect(thing).toBe(realThing);</code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="toBeCloseTo"><span class="type-signature"></span>toBeCloseTo<span class="signature">(expected, precision<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
-
-
-
-
-
-
-<div class="description">
-    <p><a href="global.html#expect"><code>expect</code></a> the actual value to be within a specified precision of the expected value.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-
-
-<table class="params">
-    <thead>
-    <tr>
-
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>expected</code></td>
-            
-
-            <td class="type">
-
-
-<span class="param-type">Object</span>
-
-
-
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>The expected value to compare against.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>precision</code></td>
-            
-
-            <td class="type">
-
-
-<span class="param-type">Number</span>
-
-
-
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    2
-                
-                </td>
-            
-
-            <td class="description last"><p>The number of decimal points to check.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-
-
-
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>1.3.0</li></ul></dd>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>expect(number).toBeCloseTo(42.2, 3);</code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="toBeDefined"><span class="type-signature"></span>toBeDefined<span class="signature">()</span><span class="type-signature"></span></h4>
-
-
+* TODO:
 
 
 
@@ -695,7 +128,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="toBeFalse"><span class="type-signature"></span>toBeFalse<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeFalse"><span class="type-signature"></span>toBeFalse<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -786,7 +219,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="toBeFalsy"><span class="type-signature"></span>toBeFalsy<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeFalsy"><span class="type-signature"></span>toBeFalsy<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -877,7 +310,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="toBeGreaterThan"><span class="type-signature"></span>toBeGreaterThan<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeGreaterThan"><span class="type-signature"></span>toBeGreaterThan<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -1017,7 +450,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="toBeGreaterThanOrEqual"><span class="type-signature"></span>toBeGreaterThanOrEqual<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeGreaterThanOrEqual"><span class="type-signature"></span>toBeGreaterThanOrEqual<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -1157,7 +590,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="toBeInstanceOf"><span class="type-signature"></span>toBeInstanceOf<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeInstanceOf"><span class="type-signature"></span>toBeInstanceOf<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -1299,7 +732,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
 
 
 
-    <h4 class="name" id="toBeLessThan"><span class="type-signature"></span>toBeLessThan<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeLessThan"><span class="type-signature"></span>toBeLessThan<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -1439,7 +872,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBeLessThanOrEqual"><span class="type-signature"></span>toBeLessThanOrEqual<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeLessThanOrEqual"><span class="type-signature"></span>toBeLessThanOrEqual<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -1579,7 +1012,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBeNaN"><span class="type-signature"></span>toBeNaN<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeNaN"><span class="type-signature"></span>toBeNaN<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -1670,7 +1103,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBeNegativeInfinity"><span class="type-signature"></span>toBeNegativeInfinity<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeNegativeInfinity"><span class="type-signature"></span>toBeNegativeInfinity<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -1761,7 +1194,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBeNull"><span class="type-signature"></span>toBeNull<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeNull"><span class="type-signature"></span>toBeNull<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -1852,7 +1285,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBePositiveInfinity"><span class="type-signature"></span>toBePositiveInfinity<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBePositiveInfinity"><span class="type-signature"></span>toBePositiveInfinity<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -1943,7 +1376,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBeTrue"><span class="type-signature"></span>toBeTrue<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeTrue"><span class="type-signature"></span>toBeTrue<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -2034,7 +1467,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBeTruthy"><span class="type-signature"></span>toBeTruthy<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeTruthy"><span class="type-signature"></span>toBeTruthy<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -2125,7 +1558,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toBeUndefined"><span class="type-signature"></span>toBeUndefined<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toBeUndefined"><span class="type-signature"></span>toBeUndefined<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -2216,7 +1649,7 @@ expect(new Error()).toBeInstanceOf(Error);</code></pre>
     
 
     
-    <h4 class="name" id="toContain"><span class="type-signature"></span>toContain<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toContain"><span class="type-signature"></span>toContain<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -2357,7 +1790,7 @@ expect(string).toContain(substring);</code></pre>
 
 
 
-    <h4 class="name" id="toEqual"><span class="type-signature"></span>toEqual<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toEqual"><span class="type-signature"></span>toEqual<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -2497,7 +1930,7 @@ expect(string).toContain(substring);</code></pre>
     
 
     
-    <h4 class="name" id="toHaveBeenCalled"><span class="type-signature"></span>toHaveBeenCalled<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveBeenCalled"><span class="type-signature"></span>toHaveBeenCalled<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -2589,7 +2022,7 @@ expect(mySpy).not.toHaveBeenCalled();</code></pre>
 
 
 
-    <h4 class="name" id="toHaveBeenCalledBefore"><span class="type-signature"></span>toHaveBeenCalledBefore<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveBeenCalledBefore"><span class="type-signature"></span>toHaveBeenCalledBefore<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -2729,7 +2162,7 @@ expect(mySpy).not.toHaveBeenCalled();</code></pre>
     
 
     
-    <h4 class="name" id="toHaveBeenCalledOnceWith"><span class="type-signature"></span>toHaveBeenCalledOnceWith<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveBeenCalledOnceWith"><span class="type-signature"></span>toHaveBeenCalledOnceWith<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -2877,7 +2310,7 @@ expect(mySpy).not.toHaveBeenCalled();</code></pre>
     
 
     
-    <h4 class="name" id="toHaveBeenCalledTimes"><span class="type-signature"></span>toHaveBeenCalledTimes<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveBeenCalledTimes"><span class="type-signature"></span>toHaveBeenCalledTimes<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -3017,7 +2450,7 @@ expect(mySpy).not.toHaveBeenCalled();</code></pre>
     
 
     
-    <h4 class="name" id="toHaveBeenCalledWith"><span class="type-signature"></span>toHaveBeenCalledWith<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveBeenCalledWith"><span class="type-signature"></span>toHaveBeenCalledWith<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -3165,7 +2598,7 @@ expect(mySpy).not.toHaveBeenCalled();</code></pre>
     
 
     
-    <h4 class="name" id="toHaveClass"><span class="type-signature"></span>toHaveClass<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveClass"><span class="type-signature"></span>toHaveClass<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -3307,7 +2740,7 @@ expect(el).toHaveClass('bar');</code></pre>
 
 
 
-    <h4 class="name" id="toHaveSize"><span class="type-signature"></span>toHaveSize<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveSize"><span class="type-signature"></span>toHaveSize<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -3448,7 +2881,7 @@ expect(array).toHaveSize(2);</code></pre>
 
 
 
-    <h4 class="name" id="toHaveSpyInteractions"><span class="type-signature"></span>toHaveSpyInteractions<span class="signature">()</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toHaveSpyInteractions"><span class="type-signature"></span>toHaveSpyInteractions<span class="signature">()</span><span class="type-signature"></span></h4>
 
 
 
@@ -3540,7 +2973,7 @@ expect(mySpyObj).not.toHaveSpyInteractions();</code></pre>
 
 
 
-    <h4 class="name" id="toMatch"><span class="type-signature"></span>toMatch<span class="signature">(expected)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toMatch"><span class="type-signature"></span>toMatch<span class="signature">(expected)</span><span class="type-signature"></span></h4>
 
 
 
@@ -3684,7 +3117,7 @@ expect("other string").toMatch("her");</code></pre>
 
 
 
-    <h4 class="name" id="toThrow"><span class="type-signature"></span>toThrow<span class="signature">(expected<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toThrow"><span class="type-signature"></span>toThrow<span class="signature">(expected<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
 
 
 
@@ -3837,7 +3270,7 @@ expect(function() { return 'stuff'; }).toThrow();</code></pre>
 
 
 
-    <h4 class="name" id="toThrowError"><span class="type-signature"></span>toThrowError<span class="signature">(expected<span class="signature-attributes">opt</span>, message<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toThrowError"><span class="type-signature"></span>toThrowError<span class="signature">(expected<span class="signature-attributes">opt</span>, message<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
 
 
 
@@ -4029,7 +3462,7 @@ expect(function() { return 'other'; }).toThrowError();</code></pre>
 
 
 
-    <h4 class="name" id="toThrowMatching"><span class="type-signature"></span>toThrowMatching<span class="signature">(predicate)</span><span class="type-signature"></span></h4>
+    ##  class="name" id="toThrowMatching"><span class="type-signature"></span>toThrowMatching<span class="signature">(predicate)</span><span class="type-signature"></span></h4>
 
 
 
@@ -4169,177 +3602,9 @@ expect(function() { return 'other'; }).toThrowError();</code></pre>
     
 
     
-    <h4 class="name" id="withContext"><span class="type-signature"></span>withContext<span class="signature">(message)</span><span class="type-signature"> &rarr; {<a href="matchers.html">matchers</a>}</span></h4>
-
-
-
-
-
-
-<div class="description">
-    <p>Add some context to be included in matcher failures for an
-<a href="global.html#expect"><code>expectation</code></a>, so that it can be more easily distinguished
-from similar expectations.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-
-
-<table class="params">
-    <thead>
-    <tr>
-
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>message</code></td>
-            
-
-            <td class="type">
-
-
-<span class="param-type">String</span>
-
-
-
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Additional context to show when the matcher fails</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-
-
-
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>3.3.0</li></ul></dd>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-
-<span class="param-type"><a href="matchers.html">matchers</a></span>
-
-
-    </dd>
-</dl>
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>expect(things[0]).withContext('thing 0').toEqual('a');
-expect(things[1]).withContext('thing 1').toEqual('b');</code></pre>
-
-
-
-
-
-
-
-
-
-</article>
-
-</section>
-
-
-
-
-  </div>
-
-  <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc</a>.
-  </footer>
-</div>
+## `.withContext(message)`
+
+* allows
+  * 👀adding context | matcher failures 👀
+    * -> -- easily distinguished from -- similar expectations
+* 👀return a matcher 👀
