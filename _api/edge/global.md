@@ -4,92 +4,8 @@ title: "Global"
 prettify: true
 ---
 
-<div class="main-content api-docs">
-  <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-jasmine-core.html">jasmine-core</a></li></ul><h3>Namespaces</h3><ul><li><a href="asymmetricEqualityTesters.html">asymmetricEqualityTesters</a></li><li><a href="async-matchers.html">async-matchers</a></li><li><a href="jasmine.html">jasmine</a></li><li><a href="matchers.html">matchers</a></li><li><a href="Spy_calls.html">Spy#calls</a></li></ul><h3>Classes</h3><ul><li><a href="Clock.html">Clock</a></li><li><a href="Env.html">Env</a></li><li><a href="jsApiReporter.html">jsApiReporter</a></li><li><a href="MatchersUtil.html">MatchersUtil</a></li><li><a href="ParallelReportDispatcher.html">ParallelReportDispatcher</a></li><li><a href="Spy.html">Spy</a></li><li><a href="Timer.html">Timer</a></li></ul><h3>Interfaces</h3><ul><li><a href="AsymmetricEqualityTester.html">AsymmetricEqualityTester</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Reporter.html">Reporter</a></li><li><a href="ReporterCapabilities.html">ReporterCapabilities</a></li><li><a href="Spec.html">Spec</a></li><li><a href="SpyStrategy.html">SpyStrategy</a></li><li><a href="Suite.html">Suite</a></li><li><a href="ThrowUnlessFailure.html">ThrowUnlessFailure</a></li></ul><h3>Global</h3><ul><li><a href="global.html#afterAll">afterAll</a></li><li><a href="global.html#afterEach">afterEach</a></li><li><a href="global.html#beforeAll">beforeAll</a></li><li><a href="global.html#beforeEach">beforeEach</a></li><li><a href="global.html#describe">describe</a></li><li><a href="global.html#expect">expect</a></li><li><a href="global.html#expectAsync">expectAsync</a></li><li><a href="global.html#fail">fail</a></li><li><a href="global.html#fdescribe">fdescribe</a></li><li><a href="global.html#fit">fit</a></li><li><a href="global.html#it">it</a></li><li><a href="global.html#pending">pending</a></li><li><a href="global.html#setSpecProperty">setSpecProperty</a></li><li><a href="global.html#setSuiteProperty">setSuiteProperty</a></li><li><a href="global.html#spyOn">spyOn</a></li><li><a href="global.html#spyOnAllFunctions">spyOnAllFunctions</a></li><li><a href="global.html#spyOnProperty">spyOnProperty</a></li><li><a href="global.html#throwUnless">throwUnless</a></li><li><a href="global.html#throwUnlessAsync">throwUnlessAsync</a></li><li><a href="global.html#xdescribe">xdescribe</a></li><li><a href="global.html#xit">xit</a></li></ul>
-  </nav>
-
-  <div class="docs">
-    <h1 class="page-title">Global</h1>
-
     
-
-
-
-
-<section>
-
-<header>
-    
-        <h2></h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
+# Methods
 
         
             
@@ -97,8 +13,12 @@ prettify: true
     
 
     
-    <h4 class="name" id="afterAll"><span class="type-signature"></span>afterAll<span class="signature">(function<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
-    
+## `afterAll(function, timeout)`
+
+* `function`
+  * optional
+* `timeout`
+  * optional
 
     
 
@@ -297,7 +217,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="afterEach"><span class="type-signature"></span>afterEach<span class="signature">(function<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="afterEach"><span class="type-signature"></span>afterEach<span class="signature">(function<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
     
 
     
@@ -496,7 +416,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="beforeAll"><span class="type-signature"></span>beforeAll<span class="signature">(function<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="beforeAll"><span class="type-signature"></span>beforeAll<span class="signature">(function<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
     
 
     
@@ -696,7 +616,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="beforeEach"><span class="type-signature"></span>beforeEach<span class="signature">(function<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="beforeEach"><span class="type-signature"></span>beforeEach<span class="signature">(function<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
     
 
     
@@ -895,7 +815,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="describe"><span class="type-signature"></span>describe<span class="signature">(description, specDefinitions)</span><span class="type-signature"></span></h4>
+## class="name" id="describe"><span class="type-signature"></span>describe<span class="signature">(description, specDefinitions)</span><span class="type-signature"></span>
     
 
     
@@ -1054,7 +974,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="expect"><span class="type-signature"></span>expect<span class="signature">(actual)</span><span class="type-signature"> &rarr; {<a href="matchers.html">matchers</a>}</span></h4>
+## class="name" id="expect"><span class="type-signature"></span>expect<span class="signature">(actual)</span><span class="type-signature"> &rarr; {<a href="matchers.html">matchers</a>}</span>
     
 
     
@@ -1207,7 +1127,7 @@ prettify: true
     
 
     
-    <h4 class="name" id="expectAsync"><span class="type-signature"></span>expectAsync<span class="signature">(actual)</span><span class="type-signature"> &rarr; {<a href="async-matchers.html">async-matchers</a>}</span></h4>
+## class="name" id="expectAsync"><span class="type-signature"></span>expectAsync<span class="signature">(actual)</span><span class="type-signature"> &rarr; {<a href="async-matchers.html">async-matchers</a>}</span>
     
 
     
@@ -1370,7 +1290,7 @@ in order for Jasmine to associate them with the correct spec.</p>
     
 
     
-    <h4 class="name" id="fail"><span class="type-signature"></span>fail<span class="signature">(error<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="fail"><span class="type-signature"></span>fail<span class="signature">(error<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
     
 
     
@@ -1520,7 +1440,7 @@ in order for Jasmine to associate them with the correct spec.</p>
     
 
     
-    <h4 class="name" id="fdescribe"><span class="type-signature"></span>fdescribe<span class="signature">(description, specDefinitions)</span><span class="type-signature"></span></h4>
+## class="name" id="fdescribe"><span class="type-signature"></span>fdescribe<span class="signature">(description, specDefinitions)</span><span class="type-signature"></span>
     
 
     
@@ -1686,7 +1606,7 @@ in order for Jasmine to associate them with the correct spec.</p>
     
 
     
-    <h4 class="name" id="fit"><span class="type-signature"></span>fit<span class="signature">(description, testFunction, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="fit"><span class="type-signature"></span>fit<span class="signature">(description, testFunction, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
     
 
     
@@ -1919,7 +1839,7 @@ in order for Jasmine to associate them with the correct spec.</p>
     
 
     
-    <h4 class="name" id="it"><span class="type-signature"></span>it<span class="signature">(description, testFunction<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="it"><span class="type-signature"></span>it<span class="signature">(description, testFunction<span class="signature-attributes">opt</span>, timeout<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
     
 
     
@@ -2157,7 +2077,7 @@ complete sentence.</p>
     
 
     
-    <h4 class="name" id="pending"><span class="type-signature"></span>pending<span class="signature">(message<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="pending"><span class="type-signature"></span>pending<span class="signature">(message<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
     
 
     
@@ -2304,7 +2224,7 @@ complete sentence.</p>
     
 
     
-    <h4 class="name" id="setSpecProperty"><span class="type-signature"></span>setSpecProperty<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
+## class="name" id="setSpecProperty"><span class="type-signature"></span>setSpecProperty<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
     
 
     
@@ -2462,7 +2382,7 @@ complete sentence.</p>
     
 
     
-    <h4 class="name" id="setSuiteProperty"><span class="type-signature"></span>setSuiteProperty<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
+## class="name" id="setSuiteProperty"><span class="type-signature"></span>setSuiteProperty<span class="signature">(key, value)</span><span class="type-signature"></span></h4>
     
 
     
@@ -2620,183 +2540,15 @@ complete sentence.</p>
     
 
     
-    <h4 class="name" id="spyOn"><span class="type-signature"></span>spyOn<span class="signature">(obj, methodName)</span><span class="type-signature"> &rarr; {<a href="Spy.html">Spy</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <p>Install a spy onto an existing object.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>obj</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The object upon which to install the <a href="Spy.html"><code>Spy</code></a>.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>methodName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The name of the method to replace with a <a href="Spy.html"><code>Spy</code></a>.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>1.3.0</li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Spy.html">Spy</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="spyOnAllFunctions"><span class="type-signature"></span>spyOnAllFunctions<span class="signature">(obj, includeNonEnumerable)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+## `spyOn(obj, methodName) -> Spy`
+
+* install a spy | EXISTING object
+* `obj`
+  * == object | install the `Spy`
+* `methodName`
+  * == method name / -- is replaced with a -- `Spy`
+
+## class="name" id="spyOnAllFunctions"><span class="type-signature"></span>spyOnAllFunctions<span class="signature">(obj, includeNonEnumerable)</span><span class="type-signature"> &rarr; {Object}</span></h4>
     
 
     
@@ -2965,261 +2717,20 @@ complete sentence.</p>
 </dl>
 
     
+## `spyOnProperty(obj, propertyName, accessType) -> Spy`
 
-
-
-
-
-        
-            
-
+* install a spy | object's property / installed -- via --`Object.defineProperty`
+* `obj`
+  * == object | install the `Spy`
+* `propertyName`
+  * == propertyName / -- is replaced with a -- `Spy`
+  * `string`
+* `accessType`
+  * optional
+  * == `get` || `set` / spy on
+    * by default, `get`
     
-
-    
-    <h4 class="name" id="spyOnProperty"><span class="type-signature"></span>spyOnProperty<span class="signature">(obj, propertyName, accessType<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Spy.html">Spy</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <p>Install a spy on a property installed with <code>Object.defineProperty</code> onto an existing object.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>obj</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>The object upon which to install the <a href="Spy.html"><code>Spy</code></a></p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>propertyName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>The name of the property to replace with a <a href="Spy.html"><code>Spy</code></a>.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>accessType</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    get
-                
-                </td>
-            
-
-            <td class="description last"><p>The access type (get|set) of the property to <a href="Spy.html"><code>Spy</code></a> on.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>2.6.0</li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Spy.html">Spy</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="throwUnless"><span class="type-signature"></span>throwUnless<span class="signature">(actual, actual)</span><span class="type-signature"> &rarr; {<a href="matchers.html">matchers</a>}</span></h4>
+## class="name" id="throwUnless"><span class="type-signature"></span>throwUnless<span class="signature">(actual, actual)</span><span class="type-signature"> &rarr; {<a href="matchers.html">matchers</a>}</span></h4>
     
 
     
@@ -3398,7 +2909,7 @@ the global unhandled exception/unhandled promise rejection events.</p>
     
 
     
-    <h4 class="name" id="throwUnlessAsync"><span class="type-signature"></span>throwUnlessAsync<span class="signature">(actual, actual)</span><span class="type-signature"> &rarr; {<a href="matchers.html">matchers</a>}</span></h4>
+## class="name" id="throwUnlessAsync"><span class="type-signature"></span>throwUnlessAsync<span class="signature">(actual, actual)</span><span class="type-signature"> &rarr; {<a href="matchers.html">matchers</a>}</span></h4>
     
 
     
@@ -3577,7 +3088,7 @@ the global unhandled exception/unhandled promise rejection events.</p>
     
 
     
-    <h4 class="name" id="xdescribe"><span class="type-signature"></span>xdescribe<span class="signature">(description, specDefinitions)</span><span class="type-signature"></span></h4>
+## class="name" id="xdescribe"><span class="type-signature"></span>xdescribe<span class="signature">(description, specDefinitions)</span><span class="type-signature"></span></h4>
     
 
     
@@ -3736,7 +3247,7 @@ the global unhandled exception/unhandled promise rejection events.</p>
     
 
     
-    <h4 class="name" id="xit"><span class="type-signature"></span>xit<span class="signature">(description, testFunction<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="xit"><span class="type-signature"></span>xit<span class="signature">(description, testFunction<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -3913,11 +3424,11 @@ the global unhandled exception/unhandled promise rejection events.</p>
     
 
     
-        <h3 class="subsection-title">Type Definitions</h3>
+# Type Definitions
 
         
                 
-<h4 class="name" id="DebugLogEntry">DebugLogEntry</h4>
+## class="name" id="DebugLogEntry">DebugLogEntry</h4>
 
 
 
@@ -4046,7 +3557,7 @@ milliseconds from the spec's start time</p></td>
 
             
                 
-<h4 class="name" id="ExpectationResult">ExpectationResult</h4>
+## class="name" id="ExpectationResult">ExpectationResult</h4>
 
 
 
@@ -4307,7 +3818,7 @@ is reported on the top suite. Valid values are undefined, &quot;afterAll&quot;,
     
 
     
-    <h4 class="name" id="implementationCallback"><span class="type-signature"></span>implementationCallback<span class="signature">(done<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+## class="name" id="implementationCallback"><span class="type-signature"></span>implementationCallback<span class="signature">(done<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -4459,7 +3970,7 @@ If you have code that you need to test asynchronously, you can declare that you 
 
             
                 
-<h4 class="name" id="JasmineDoneInfo">JasmineDoneInfo</h4>
+## class="name" id="JasmineDoneInfo">JasmineDoneInfo</h4>
 
 
 
@@ -4732,7 +4243,7 @@ If you have code that you need to test asynchronously, you can declare that you 
 
             
                 
-<h4 class="name" id="JasmineStartedInfo">JasmineStartedInfo</h4>
+## class="name" id="JasmineStartedInfo">JasmineStartedInfo</h4>
 
 
 
@@ -4894,7 +4405,7 @@ If you have code that you need to test asynchronously, you can declare that you 
     
 
     
-    <h4 class="name" id="SpecFilter"><span class="type-signature"></span>SpecFilter<span class="signature">(spec)</span><span class="type-signature"></span></h4>
+## class="name" id="SpecFilter"><span class="type-signature"></span>SpecFilter<span class="signature">(spec)</span><span class="type-signature"></span></h4>
     
 
     
@@ -5033,7 +4544,7 @@ or false if it should be skipped.</p>
 
             
                 
-<h4 class="name" id="SpecResult">SpecResult</h4>
+## class="name" id="SpecResult">SpecResult</h4>
 
 
 
@@ -5423,7 +4934,7 @@ or false if it should be skipped.</p>
 
             
                 
-<h4 class="name" id="SuiteResult">SuiteResult</h4>
+## class="name" id="SuiteResult">SuiteResult</h4>
 
 
 
@@ -5745,14 +5256,3 @@ or false if it should be skipped.</p>
     
 </article>
 
-</section>
-
-
-
-
-  </div>
-
-  <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc</a>.
-  </footer>
-</div>
