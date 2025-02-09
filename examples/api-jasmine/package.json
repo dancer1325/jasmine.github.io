@@ -1,0 +1,15 @@
+{
+  "name": "api-jasmine",
+  "version": "1.0.0",
+  "description": "* follow [here](/pages/getting_started.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^5.6.0"
+  }
+}

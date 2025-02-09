@@ -4,103 +4,14 @@ title: "Namespace: jasmine"
 prettify: true
 ---
 
-<div class="main-content api-docs">
-  <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-jasmine-core.html">jasmine-core</a></li></ul><h3>Namespaces</h3><ul><li><a href="asymmetricEqualityTesters.html">asymmetricEqualityTesters</a></li><li><a href="async-matchers.html">async-matchers</a></li><li><a href="jasmine.html">jasmine</a></li><li><a href="matchers.html">matchers</a></li><li><a href="Spy_calls.html">Spy#calls</a></li></ul><h3>Classes</h3><ul><li><a href="Clock.html">Clock</a></li><li><a href="Env.html">Env</a></li><li><a href="jsApiReporter.html">jsApiReporter</a></li><li><a href="MatchersUtil.html">MatchersUtil</a></li><li><a href="ParallelReportDispatcher.html">ParallelReportDispatcher</a></li><li><a href="Spy.html">Spy</a></li><li><a href="Timer.html">Timer</a></li></ul><h3>Interfaces</h3><ul><li><a href="AsymmetricEqualityTester.html">AsymmetricEqualityTester</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="Reporter.html">Reporter</a></li><li><a href="ReporterCapabilities.html">ReporterCapabilities</a></li><li><a href="Spec.html">Spec</a></li><li><a href="SpyStrategy.html">SpyStrategy</a></li><li><a href="Suite.html">Suite</a></li><li><a href="ThrowUnlessFailure.html">ThrowUnlessFailure</a></li></ul><h3>Global</h3><ul><li><a href="global.html#afterAll">afterAll</a></li><li><a href="global.html#afterEach">afterEach</a></li><li><a href="global.html#beforeAll">beforeAll</a></li><li><a href="global.html#beforeEach">beforeEach</a></li><li><a href="global.html#describe">describe</a></li><li><a href="global.html#expect">expect</a></li><li><a href="global.html#expectAsync">expectAsync</a></li><li><a href="global.html#fail">fail</a></li><li><a href="global.html#fdescribe">fdescribe</a></li><li><a href="global.html#fit">fit</a></li><li><a href="global.html#it">it</a></li><li><a href="global.html#pending">pending</a></li><li><a href="global.html#setSpecProperty">setSpecProperty</a></li><li><a href="global.html#setSuiteProperty">setSuiteProperty</a></li><li><a href="global.html#spyOn">spyOn</a></li><li><a href="global.html#spyOnAllFunctions">spyOnAllFunctions</a></li><li><a href="global.html#spyOnProperty">spyOnProperty</a></li><li><a href="global.html#throwUnless">throwUnless</a></li><li><a href="global.html#throwUnlessAsync">throwUnlessAsync</a></li><li><a href="global.html#xdescribe">xdescribe</a></li><li><a href="global.html#xit">xit</a></li></ul>
-  </nav>
+# Members
 
-  <div class="docs">
-    <h1 class="page-title">Namespace: jasmine</h1>
-
-    
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>jasmine</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>Members of the jasmine global.</p>
-<p>Note: The members of the
-<a href="asymmetricEqualityTesters.html"><code>asymmetricEqualityTesters namespace</code></a>
-are also accessed via the jasmine global, but due to jsdoc limitations
-they are not listed here.</p></div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
+* == Jasmine global's members
+  * -> 👀[asymmetricEqualityTesters namespace](asymmetricEqualityTesters.md) -- can ALSO -- be accessed 👀
             
-<h4 class="name" id=".DEFAULT_TIMEOUT_INTERVAL"><span class="type-signature">(static) </span>DEFAULT_TIMEOUT_INTERVAL<span class="type-signature"></span></h4>
+## `DEFAULT_TIMEOUT_INTERVAL`
 
-
-
+* == static
 
 <div class="description">
     <p>Default number of milliseconds Jasmine will wait for an asynchronous spec,
@@ -153,24 +64,10 @@ does not move on to after functions or the next spec while you're debugging.</p>
             <li>5000</li>
         </ul></dd>
     
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
         
-            
-<h4 class="name" id=".MAX_PRETTY_PRINT_ARRAY_LENGTH"><span class="type-signature">(static) </span>MAX_PRETTY_PRINT_ARRAY_LENGTH<span class="type-signature"></span></h4>
+## `MAX_PRETTY_PRINT_ARRAY_LENGTH`
+
+* == static
 
 
 
@@ -230,17 +127,7 @@ Elements past this number will be ellipised.</p>
     
 </dl>
 
-
-
-
-
-
-        
-            
-<h4 class="name" id=".MAX_PRETTY_PRINT_CHARS"><span class="type-signature">(static) </span>MAX_PRETTY_PRINT_CHARS<span class="type-signature"></span></h4>
-
-
-
+## `MAX_PRETTY_PRINT_CHARS`
 
 <div class="description">
     <p>Maximum number of characters to display when pretty printing objects.
@@ -295,18 +182,8 @@ Characters past this number will be ellipised.</p>
 
     
 </dl>
-
-
-
-
-
-
-        
             
-<h4 class="name" id=".MAX_PRETTY_PRINT_DEPTH"><span class="type-signature">(static) </span>MAX_PRETTY_PRINT_DEPTH<span class="type-signature"></span></h4>
-
-
-
+## `MAX_PRETTY_PRINT_DEPTH`
 
 <div class="description">
     <p>Maximum object depth the pretty printer will print to.
@@ -371,15 +248,11 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 
     
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
+# Methods
     
+## `addAsyncMatchers(matchers)`
 
-    
-    <h4 class="name" id=".addAsyncMatchers"><span class="type-signature">(static) </span>addAsyncMatchers<span class="signature">(matchers)</span><span class="type-signature"></span></h4>
+* == static
     
 
     
@@ -497,32 +370,10 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 </dl>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
     
+## `addCustomEqualityTester(tester)`
 
-    
-    <h4 class="name" id=".addCustomEqualityTester"><span class="type-signature">(static) </span>addCustomEqualityTester<span class="signature">(tester)</span><span class="type-signature"></span></h4>
+* == static
     
 
     
@@ -665,7 +516,7 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 
     
-    <h4 class="name" id=".addCustomObjectFormatter"><span class="type-signature">(static) </span>addCustomObjectFormatter<span class="signature">(formatter)</span><span class="type-signature"></span></h4>
+## `addCustomObjectFormatter(formatter)`
     
 
     
@@ -808,7 +659,9 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 
     
-    <h4 class="name" id=".addMatchers"><span class="type-signature">(static) </span>addMatchers<span class="signature">(matchers)</span><span class="type-signature"></span></h4>
+## `addMatchers(matchers)`
+
+* == static
     
 
     
@@ -951,7 +804,7 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 
     
-    <h4 class="name" id=".addSpyStrategy"><span class="type-signature">(static) </span>addSpyStrategy<span class="signature">(name, factory)</span><span class="type-signature"></span></h4>
+## class="name" id=".addSpyStrategy"><span class="type-signature">(static) </span>addSpyStrategy<span class="signature">(name, factory)</span><span class="type-signature"></span>
     
 
     
@@ -1110,7 +963,7 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 
     
-    <h4 class="name" id=".clock"><span class="type-signature">(static) </span>clock<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Clock.html">Clock</a>}</span></h4>
+## class="name" id=".clock"><span class="type-signature">(static) </span>clock<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Clock.html">Clock</a>}</span>
     
 
     
@@ -1214,7 +1067,7 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 
     
-    <h4 class="name" id=".createSpy"><span class="type-signature">(static) </span>createSpy<span class="signature">(name<span class="signature-attributes">opt</span>, originalFn<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Spy.html">Spy</a>}</span></h4>
+## class="name" id=".createSpy"><span class="type-signature">(static) </span>createSpy<span class="signature">(name<span class="signature-attributes">opt</span>, originalFn<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Spy.html">Spy</a>}</span>
     
 
     
@@ -1416,243 +1269,32 @@ instead of createSpy.</p></td>
     
 
     
-    <h4 class="name" id=".createSpyObj"><span class="type-signature">(static) </span>createSpyObj<span class="signature">(baseName<span class="signature-attributes">opt</span>, methodNames, propertyNames<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+## `createSpyObj(baseName, methodNames, propertyNames) -> Object`
+
+* `baseName`
+  * optional
+  * == base name | object's spies
+  * uses
+    * spy object's identifier | tracking messages
+* `methodNames`
+  * == [String] | Object
+    * if you use Object -> 
+      * Object's keys == method names
+      * Object's values == `returnValue`
+* `propertyNames`
+  * optional
+  * == spyObject's properties
+  * == [String] | Object
+    * if you use Object ->
+        * Object's keys == property names
+        * Object's values == `returnValue`
+* allows
+  * creating an object / 
+    * 👀's members (method & properties) == MULTIPLE [Spy](Spy.md) 👀
     
+## class="name" id=".debugLog"><span class="type-signature">(static) </span>debugLog<span class="signature">(msg)</span><span class="type-signature"></span>
 
-    
-
-
-
-<div class="description">
-    <p>Create an object with multiple <a href="Spy.html"><code>Spy</code></a>s as its members.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>baseName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Base name for the spies in the object.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>methodNames</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
-|
-
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Array of method names to create spies for, or Object whose keys will be method names and values the <code>returnValue</code>.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>propertyNames</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;String></span>
-|
-
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Array of property names to create spies for, or Object whose keys will be propertynames and values the <code>returnValue</code>.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>1.3.0</li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".debugLog"><span class="type-signature">(static) </span>debugLog<span class="signature">(msg)</span><span class="type-signature"></span></h4>
-    
+* TODO:
 
     
 
@@ -1790,7 +1432,7 @@ beforeEach or afterEach functions) is running.</p>
     
 
     
-    <h4 class="name" id=".getEnv"><span class="type-signature">(static) </span>getEnv<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Env.html">Env</a>}</span></h4>
+## class="name" id=".getEnv"><span class="type-signature">(static) </span>getEnv<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Env.html">Env</a>}</span>
     
 
     
@@ -1894,7 +1536,7 @@ beforeEach or afterEach functions) is running.</p>
     
 
     
-    <h4 class="name" id=".isSpy"><span class="type-signature">(static) </span>isSpy<span class="signature">(putativeSpy)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+## class="name" id=".isSpy"><span class="type-signature">(static) </span>isSpy<span class="signature">(putativeSpy)</span><span class="type-signature"> &rarr; {Boolean}</span>
     
 
     
@@ -2047,7 +1689,7 @@ beforeEach or afterEach functions) is running.</p>
     
 
     
-    <h4 class="name" id=".setDefaultSpyStrategy"><span class="type-signature">(static) </span>setDefaultSpyStrategy<span class="signature">(defaultStrategyFn)</span><span class="type-signature"></span></h4>
+## class="name" id=".setDefaultSpyStrategy"><span class="type-signature">(static) </span>setDefaultSpyStrategy<span class="signature">(defaultStrategyFn)</span><span class="type-signature"></span>
     
 
     
@@ -2187,7 +1829,7 @@ beforeEach or afterEach functions) is running.</p>
     
 
     
-    <h4 class="name" id=".spyOnGlobalErrorsAsync"><span class="type-signature">(async, static) </span>spyOnGlobalErrorsAsync<span class="signature">(fn)</span><span class="type-signature"></span></h4>
+## class="name" id=".spyOnGlobalErrorsAsync"><span class="type-signature">(async, static) </span>spyOnGlobalErrorsAsync<span class="signature">(fn)</span><span class="type-signature"></span>
     
 
     
@@ -2365,13 +2007,3 @@ completion is likely to cause problems and is not supported.</p>
 </article>
 
 </section>
-
-
-
-
-  </div>
-
-  <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc</a>.
-  </footer>
-</div>
