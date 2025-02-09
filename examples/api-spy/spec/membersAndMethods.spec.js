@@ -6,10 +6,20 @@ describe('members', () => {
         console.log("BEFORE invoking the spy -- spy.callData ", spy.callData);     // undefined
         // 1.2 AFTER invoking the spy     ->
         spy('arg1', 42);
-        spy('arg2');
+        spy('arg2', 'arg3');
         console.log("AFTER invoking the spy -- spy.callData ", spy.callData);     //    STILL undefined     -- Reason: 🧠 it's static 🧠 --
 
-        // TODO: How to use it? if it's static how to access 's properties? -- issue created -- https://github.com/jasmine/jasmine.github.io/issues/176
+        // TODO: How to use it? issue created -- https://github.com/jasmine/jasmine.github.io/issues/176
+        // 2. get access -- via -- some Spy.call
+        console.log("AFTER invoking the spy - spy.calls.mostRecent() ", spy.calls.mostRecent());
+        // 2.1  callData.object
+        console.log("AFTER invoking the spy - spy.calls.mostRecent().object ", spy.calls.mostRecent().object);
+        // 2.2  callData.invocationOrder
+        console.log("AFTER invoking the spy - spy.calls.mostRecent().invocationOrder ", spy.calls.mostRecent().invocationOrder);
+        // 2.3  callData.args
+        console.log("AFTER invoking the spy - spy.calls.mostRecent().args ", spy.calls.mostRecent().args);
+        // 2.4  callData.returnValue
+        console.log("AFTER invoking the spy - spy.calls.mostRecent().returnValue ", spy.calls.mostRecent().returnValue);
     });
 
     it('and', () => {

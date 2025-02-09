@@ -22,8 +22,9 @@ prettify: true
 ## `callData`
 
 * static
-* if you have
-  * NOT invoked the spy -> undefined
+* if you 
+  * ⚠️ have NOT invoked the spy -> undefined ⚠️
+  * 💡want to get access to it -> use some [Spy.calls](Spy_calls.md) 💡
 * properties
   * `object`
     * == `this` context for the invocation
