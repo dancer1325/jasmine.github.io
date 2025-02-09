@@ -9,7 +9,7 @@ describe('members', () => {
         spy('arg2');
         console.log("AFTER invoking the spy -- spy.callData ", spy.callData);     //    STILL undefined     -- Reason: 🧠 it's static 🧠 --
 
-        // TODO: How to use it? if it's static how to access 's properties?
+        // TODO: How to use it? if it's static how to access 's properties? -- issue created -- https://github.com/jasmine/jasmine.github.io/issues/176
     });
 
     it('and', () => {
