@@ -1067,208 +1067,28 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     
 
     
-## class="name" id=".createSpy"><span class="type-signature">(static) </span>createSpy<span class="signature">(name<span class="signature-attributes">opt</span>, originalFn<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="Spy.html">Spy</a>}</span>
+## `.createSpy(name, originalFn) -> Spy`
     
+* create a bare `Spy` /
+  * NOT installed | anywhere
+    * ⚠️== NOT attached | ANY object ⚠️
+  * NO implementation 
+* `name`
+  * optional
+  * == `string`
+  * == spy name
+  * uses
+    * | failure messages
+* `originalFn`
+  * optional
+  * == `function`
+    * recommendations
+      * use [`spyOn`](global.md)
+  * requirements
+    * ⚠️invoke BEFORE `someSpy.and.callThrough()` ⚠️ 
+      * -> subsequent calls will use it
+      * OTHERWISE, undefined
 
-    
-
-
-
-<div class="description">
-    <p>Create a bare <a href="Spy.html"><code>Spy</code></a> object. This won't be installed anywhere and will not have any implementation behind it.</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Name to give the spy. This will be displayed in failure messages.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>originalFn</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The &quot;real&quot; function. This will
-be used for subsequent calls to the spy after you call
-<code>mySpy.and.callThrough()</code>. In most cases you should omit this parameter.
-The usual way to supply an original function is to call <a href="global.html#spyOn"><code>spyOn</code></a>
-instead of createSpy.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-    <dt class="tag-since">Since:</dt>
-    <dd class="tag-since"><ul class="dummy"><li>1.3.0</li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Spy.html">Spy</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
 ## `createSpyObj(baseName, methodNames, propertyNames) -> Object`
 
 * `baseName`
