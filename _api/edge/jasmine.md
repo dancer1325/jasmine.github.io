@@ -1055,20 +1055,8 @@ Set this to a lower value to speed up pretty printing if you have large objects.
     </dd>
 </dl>
 
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
 ## `.createSpy(name, originalFn) -> Spy`
-    
+
 * create a bare `Spy` /
   * NOT installed | anywhere
     * ⚠️== NOT attached | ANY object ⚠️
@@ -1111,7 +1099,7 @@ Set this to a lower value to speed up pretty printing if you have large objects.
 * allows
   * creating an object / 
     * 👀's members (method & properties) == MULTIPLE [Spy](Spy.md) 👀
-    
+ 
 ## class="name" id=".debugLog"><span class="type-signature">(static) </span>debugLog<span class="signature">(msg)</span><span class="type-signature"></span>
 
 * TODO:
