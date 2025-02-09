@@ -35,9 +35,8 @@ prettify: true
 
 * see [SpyStrategy](SpyStrategy.md)
 * allows
-  * getting access to the default strategy -- for the -- spy
-* uses `SpyStrategy`
-  * if the spy is called with arguments / -- NOT match -- any strategy / created with `Spy.withArgs`
+  * getting access to the ⚠️default ⚠️strategy -- for the -- spy
+    * default == if the spy is called with arguments / -- NOT match -- any strategy / created with `Spy.withArgs`
 
 # Methods
     
