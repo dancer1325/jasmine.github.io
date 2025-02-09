@@ -17,7 +17,7 @@ describe('matchers\' methods', () => {
 
     let things = ['d', 'c', 'c'];
     it('.withContext(message)', () => {
-        expect(things[0]).withContext('thing 0').toEqual('a');
-        expect(things[1]).withContext('thing 1').toEqual('b');
+        expect(things[0]).withContext('thing 0').toEqual('a');      //  'thing 0'           added | failure message
+        expect(things[1]).withContext('thing 1').toEqual('b');      //  'thing 1'           added | failure message
     });
 })

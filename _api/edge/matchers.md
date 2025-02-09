@@ -3602,9 +3602,12 @@ expect(function() { return 'other'; }).toThrowError();</code></pre>
     
 
     
-## `.withContext(message)`
+## `.withContext(message) -> matchers`
 
 * allows
   * 👀adding context | matcher failures 👀
     * -> -- easily distinguished from -- similar expectations
+* `message`
+  * == `string`
+  * if the matcher fails -> additional context
 * 👀return a matcher 👀
