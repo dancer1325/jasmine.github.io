@@ -22,14 +22,17 @@ prettify: true
 ## `callData`
 
 * static
-* `object`
-  * == `this` context for the invocation
-* `invocationOrder`
-  * == invocation order
-* `args`
-  * == [] of arguments / -- passed for -- this invocation
-* `returnValue`
-  * == value / -- returned from -- this invocation 
+* if you have
+  * NOT invoked the spy -> undefined
+* properties
+  * `object`
+    * == `this` context for the invocation
+  * `invocationOrder`
+    * == invocation order
+  * `args`
+    * == [] of arguments / -- passed for -- this invocation
+  * `returnValue`
+    * == value / -- returned from -- this invocation 
 
 ## `and :SpyStrategy`
 

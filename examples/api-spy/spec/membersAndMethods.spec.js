@@ -1,6 +1,15 @@
 describe('members', () => {
     it('callData', () => {
-        // TODO:
+        const spy = jasmine.createSpy('getSomething');
+        // 1. it's static
+        // 1.1 BEFORE being invoked the spy     -> undefined
+        console.log("BEFORE invoking the spy -- spy.callData ", spy.callData);     // undefined
+        // 1.2 AFTER invoking the spy     ->
+        spy('arg1', 42);
+        spy('arg2');
+        console.log("AFTER invoking the spy -- spy.callData ", spy.callData);     //    STILL undefined     -- Reason: 🧠 it's static 🧠 --
+
+        // TODO: How to use it? if it's static how to access 's properties?
     });
 
     it('and', () => {
