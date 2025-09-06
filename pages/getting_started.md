@@ -29,23 +29,16 @@
 # Jasmine Standalone
 * allows
   * running your specs | web browser
+
 * steps
   * [download it](https://github.com/jasmine/jasmine/releases)
-* TODO:
-        Included is a sample app and sample specs.
-        Open SpecRunner.html and run the included specs.
-        Both the source files and their respective specs are linked in the &lt;head&gt; of the SpecRunner.html.
-      </p>
-      <p>
-        To start using Jasmine, replace the source/spec files with your own.
-        Then load the SpecRunner.html in your favorite browser.
-      </p>
-      <p>
-        You don't need a web server to run the standalone distribution, but it
-        helps. Some browsers limit the error information that they provide to
-        scripts running from file:// URLs, and this can make it harder to debug
-        uncaught exceptions and unhandled promise rejections. If that's a concern,
-        consider using a simple web server like the one provided by the
-        <a href="https://www.npmjs.com/package/serve">serve</a> package.
-      </p>
-* see more [here](https://github.com/jasmine/jasmine#installation)
+  * if you want to test your source / spec ->
+    * create file | "spec/" & add script | SpecRunner.html
+
+* ❌NOT need a web server❌
+  * recommendations
+    * 👀if you need ALL error information -> use a simple web server (_Example:_ [serve](https://www.npmjs.com/package/serve))👀 
+    * Reason:🧠| provide scripts `file://`, some browsers limit the provided error information
+      * -> harder to debug uncaught exceptions🧠 
+
+* see MORE [here](https://github.com/jasmine/jasmine#installation)
