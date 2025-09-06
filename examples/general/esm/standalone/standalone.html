@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="jasmine.css">
+    <script src="jasmine.js"></script>
+    <script src="jasmine-html.js"></script>
+    <script src="boot0.js"></script>
+</head>
+<body>
+    <!-- 1. | ES modules -->
+    <!-- 1.1 WITHOUT specifying type="module" ->  NOT work  -->
+    <script src="esmodule.js"></script>
+
+    <!-- 1.2 specifying type="module" ->  work  -->
+    <script type="module" src="esmodule.js"></script>
+    <!-- you can use script's exported -->
+    <script type="module">
+        console.log('thanks to type="module"');
+        import { greeting, add } from './esmodule.js';
+        console.log('Imported:', greeting);
+        console.log('2 + 3 =', add(2, 3));
+    </script>
+</body>
+</html>
